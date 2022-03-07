@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Section7 from "../home/Section7";
+
 import Navbar from "../navbar/Navbar";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
@@ -28,7 +28,7 @@ function About() {
             </Section4>
             <Section5 />
 
-            <Section7 />
+
         </MainContainer>
     )
 }

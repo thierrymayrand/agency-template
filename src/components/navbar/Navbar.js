@@ -70,7 +70,7 @@ function Navbar() {
 
     }
     const [show, setShow] = useState(false)
-    const items = [{ title: "Home", ref: "home" }, { title: "About Us", ref: "about" }, { title: "Features", ref: "features" }, { title: "Pricing", ref: "pricing" }, { title: "Work", ref: "work" }]
+    const items = [{ title: "Home", ref: "home" }, { title: "About Us", ref: "about" }, { title: "Features", ref: "features" }, { title: "Work", ref: "work" }]
     return (
         <MainContainer>
             <Image src={menu} onClick={menuHandler} />

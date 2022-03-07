@@ -48,6 +48,10 @@ color: #282938;
 `
 const P = styled.p`
 color: black;
+width: 80%;
+@media(max-width: 768px) {
+    width: 100%;
+}
 `
 
 const BottomSection = styled.div`
@@ -66,11 +70,11 @@ function Section2() {
                     <TopSection>
 
                         <Title>Goal focussed</Title>
-                        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</P>
+                        <P>Digital agency focused on creative and results-driven solutions. Whether it’s to increase profits, provide support, sell products or promote your brand, allow our web design services to bring your company front and center.</P>
                     </TopSection>
                     <TopSection>
                         <Title>Continuous improvement</Title>
-                        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</P>
+                        <P>Every web and marketing professional here at TITI understands the importance of being a client-first digital agency that places unparalleled value on building long-term relationships, providing superb customer service and developing high-quality web-based solutions.</P>
                     </TopSection>
                 </Top>
             </TopTitle>

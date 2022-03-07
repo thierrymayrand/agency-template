@@ -51,7 +51,7 @@ function Section1() {
             <Left>
                 <SubT>About us</SubT>
                 <Title>Our designs solve problems</Title>
-                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</P>
+                <P>We are web designers, developers, project managers, and digital marketing professionals dedicated to creative and results-driven web-based solutions using the latest trends and technologies.</P>
             </Left>
             <Left>
                 <Image src={img} />

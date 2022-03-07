@@ -7,7 +7,7 @@ background: #F4F6FC;
 
 `
 const Container = styled.div`
-margin: 10% 20%;
+margin: 5% 20%;
 @media (max-width: 768px) {
     margin: 10%;
 }
@@ -15,23 +15,30 @@ margin: 10% 20%;
 
 const Title = styled.h1`
 color: black;
-
 text-align: center;
+@media (max-width: 768px) {
+    font-size: 40px;
+}
 `
 
 const ItemContainer = styled.div`
 display: flex;
 justify-content: center;
 gap: 20px;
-margin-top: 30px;
+margin-top: 5%;
 flex-wrap: wrap;
 `
 
 
 const ItemCard = styled.div`
-width: 90%;
-height: 316px;
+width: 30%;
+height: 350px;
+min-width: 350px;
 background-color: white;
+@media (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+}
 `
 const CardContent = styled.div`
 margin: 20px 10px;

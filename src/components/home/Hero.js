@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import arrow from "../../images/arrow.png"
 import illustration from "../../images/Illustration.png"
@@ -13,15 +14,19 @@ background-color: rgb(28,30,83);
 const FlexContainer = styled.div`
 display: flex;
 justify-content: center;
+height: 80vh;
+align-items: center;
 @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0;
+    height: auto;
 }
 `
 
 const LeftComponent = styled.div`
 width: 542px;
-margin-top: 170px;
+
 margin-left: 50px;
 color: white;
 
@@ -33,7 +38,7 @@ color: white;
 }
 `
 const RightComponent = styled.div`
-margin-top: 170px;
+
 margin-left: 50px;
 @media (max-width: 768px) {
     margin-top: 10px;
@@ -49,15 +54,35 @@ const H1 = styled.h1`
 `
 
 const P = styled.p`
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 28px;
+/* or 175% */
 
-text-align: center;
-margin: 50px 10px;
-margin-bottom: 0;
+
+/* White */
+
+color: #FFFFFF;
+
+opacity: 0.7;
+
+@media (max-width: 768px) {
+    text-align: center;
+    margin: 50px 10px;
+}
+
+
+
 `
 const ButtonsContainer = styled.div`
+@media (max-width: 768px) {
+    justify-content: center;
+}
 display: flex;
 margin-top: 30px;
-justify-content: center;
+
 
 
 `
@@ -86,7 +111,17 @@ const Illustration = styled.img`
 width: 90%;
 margin: 10px 10px;
 `
-
+const linkStyle = {
+    padding: "18px 40px",
+    borderRadius: "41px",
+    border: "none",
+    background: "#FCD980",
+    color: "black",
+    fontFamily: "'Poppins', sans-serif",
+    fontWeight: '500',
+    fontSize: '16px',
+    textDecoration: "none"
+}
 function Hero() {
     return (
         <HeroContainer>
@@ -95,7 +130,7 @@ function Hero() {
                     <H1>Building Stellar websites for early startups</H1>
                     <P>Our roots come from the best experts in web development, software development, SaaS development, application development, programming, UX/UI design and architects.</P>
                     <ButtonsContainer>
-                        <Button>View our work</Button>
+                        <Link to="/work" style={linkStyle}>View our work</Link>
 
 
                     </ButtonsContainer>

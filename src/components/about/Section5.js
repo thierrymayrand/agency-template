@@ -12,12 +12,6 @@ margin: 10% 2%;
 `
 
 const Title = styled.h1`
-color: black;
-width: 100%;
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-padding-top: 60px;
 
 `
 
@@ -25,6 +19,7 @@ const ItemContainer = styled.div`
 display: flex;
 justify-content: center;
 gap: 20px;
+
 margin-top: 30px;
 flex-wrap: wrap;
 @media (max-width: 768px) {
@@ -36,9 +31,13 @@ flex-wrap: wrap;
 
 const ItemCard = styled.div`
 width: 30%;
+min-width: 400px;
+height: 400px;
 background-color: white;
 @media (max-width: 768px) {
     width: 100%;
+    min-width: 200px;
+    height: 300px;
 }
 `
 const CardContent = styled.div`
@@ -59,9 +58,9 @@ height:32px;
 `
 function Section5() {
     const items = [
-        { title: "Uses Client First", image: "../../images/arrow.png", text: "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. " },
-        { title: "Two Free Revision Round", image: "../../images/check.svg", text: "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. " },
-        { title: "Template Customization", image: "../../images/check.svg", text: "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. " },
+        { title: "Speed", image: "../../images/arrow.png", text: "Chose from over 500 production ready websites. Together we customize your website to your taste." },
+        { title: "Cost Effective", image: "../../images/check.svg", text: "By leveraging our templates we save a tremendous amount of time. Allowing us to deliver. Fast. " },
+        { title: "Template Customization", image: "../../images/check.svg", text: "Unlimited back and forth between you, your team and us. Create new landing page, modify the existing pages. Anytime." },
 
     ]
     return (

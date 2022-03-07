@@ -3,7 +3,7 @@ import Section5 from "../about/Section5";
 import Section5H from "../home/Section5";
 import Hero from "./Hero";
 import { ImageRight, ImageLeft } from "../about/FlexComponents";
-import Section7 from "../home/Section7";
+
 
 const MainContainer = styled.div`
 
@@ -26,7 +26,7 @@ Client-first " subtitle="24/7 Support" />
 
             </Margin>
             <Section5H />
-            <Section7 />
+
         </MainContainer>
 
     )

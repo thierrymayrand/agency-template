@@ -17,7 +17,7 @@ margin: 10% 20%;
 }
 `
 const LeftContainer = styled.div`
-width: 410px;
+width: 50%;
 @media (max-width: 768px) {
     width: auto;
 }
@@ -41,11 +41,14 @@ margin-top: 10px;
 `
 
 const RightContainer = styled.div`
-margin-top: 50px;
 
+@media (max-width: 768px) {
+    margin-top: 30px;
+}
 `
 const CardContainer = styled.div`
 display: flex;
+flex-direction: column;
 gap: 20px;
 @media (max-width: 768px) {
     flex-direction: column;

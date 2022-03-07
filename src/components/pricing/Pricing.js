@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Section5 from "../home/Section5"
-import Section7 from "../home/Section7"
+
 
 const MainContainer = styled.div`
 margin: 0 10%;
@@ -76,7 +76,7 @@ line-height: 28px;
 `
 function Pricing() {
 
-    const items = [{ price: "299", title: "Landing Page", text: "When you’re ready to go beyond prototyping in Figma, ", website: true, loggin: false, chatbot: false, paymentGateway: false },
+    const items = [{ price: "1K", title: "Website design and code ", text: "When you’re ready to go beyond prototyping in Figma, ", website: true, loggin: false, chatbot: false, paymentGateway: false },
     { price: "399", title: "Website Page", text: "When you’re ready to go beyond prototyping in Figma, ", website: true, loggin: false, chatbot: false, paymentGateway: false },
     { price: "499 +", title: "Complex Project", text: "When you’re ready to go beyond prototyping in Figma, ", website: true, loggin: false, chatbot: false, paymentGateway: false }]
     return (
@@ -103,7 +103,7 @@ function Pricing() {
                 })}
             </PackageContainer>
             <Section5 />
-            <Section7 />
+
         </MainContainer>
     )
 }

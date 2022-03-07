@@ -2,6 +2,66 @@ import styled from "styled-components"
 import Card from "../../images/Card.png"
 import TopImg from "../../images/imgtop.png"
 import BottomImg from "../../images/bottom.png"
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
+import { images } from "./images"
+
+
+const Main = styled.div`
+
+`
+const Carousel = styled.div`
+
+overflow: hidden;
+cursor: grab;
+`
+const InnerCarousel = styled.div`
+display: flex;
+
+
+
+`
+
+const Item = styled.div`
+
+padding: 20px;
+
+`
+
+const Image = styled.img`
+width: 30rem;
+margin: 30px;
+margin-left: 0;
+pointer-events: none;
+border-radius: 5px;
+`
+
+const Title = styled.h2`
+
+margin: 0;
+font-size: 40px; 
+`
+
+const Section1 = styled.div`
+height: 100vh;
+width: 100vw;
+
+`
+
+const Video = styled.video`
+width: 100%;
+height: 100%;
+`
+
+const Text = styled.h2`
+color: white;
+font-weight: 300;
+font-size: 3em;
+margin: 0;
+cursor: grab;
+`
+
 
 const Section = styled.div`
 
@@ -49,6 +109,11 @@ height: 600px;
 background-image: url(${Card});
 background-position: right bottom;
   background-repeat: no-repeat;
+  @media (max-width: 768px) {
+      background-size: cover;
+      height: 400px;
+    
+}
 `
 
 const LeftTextContainer = styled.div`
@@ -58,6 +123,10 @@ background: linear-gradient(329.39deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 1
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
+@media (max-width: 768px) {
+    width: 90%;
+    
+}
 `
 
 const LeftTitle = styled.h2`
@@ -106,46 +175,55 @@ flex-direction: column;
 justify-content: flex-end;
 height: 100%;
 width: 100%;
-background: linear-gradient(329.39deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);`
+background: linear-gradient(329.39deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+`
 const TopTextContainer = styled.div`
 margin: 0 10px;
 margin-bottom: 15px;`
 
+const linkStyle = {
+    width: "100%",
+}
 function Section2() {
+    const variants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+    }
+
+    const [width, setWidth] = useState(0)
+
+    const carousel = useRef()
+
+    useEffect(() => {
+        let lenght = carousel.current.scrollWidth - carousel.current.offsetWidth + 60;
+        console.log(carousel.current.scrollWidth, carousel.current.offsetWidth, lenght)
+        setWidth(lenght)
+    }, [])
+
     return (
         <div>
 
             <Section>
                 <Container>
-                    <Menu>
-                        <MenuTitle>View our projects</MenuTitle>
-                        <ViewMoreText>View More</ViewMoreText>
-                    </Menu>
-                    <Body>
-                        <Left>
-                            <LeftTextContainer>
-                                <TextContainer><LeftTitle>Workhub office React Design</LeftTitle>
-                                    <LeftP>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam </LeftP>
-                                    <ViewProject>View project</ViewProject> </TextContainer>
 
-                            </LeftTextContainer>
 
-                        </Left>
-                        <Right>
-                            <Top>
-                                <LayerTop>
-                                    <TopTextContainer>
-                                        <LeftTitle>Unisaas Website Design</LeftTitle>
-                                        <ViewProject>View Portfolio</ViewProject>
-                                    </TopTextContainer>
-                                </LayerTop>
+                    <Title as={motion.h2} animate={{ x: 20 }} transition={{ ease: "easeInOut", duration: 2 }} >Scroll Cards</Title>
+                    <Carousel as={motion.div} ref={carousel}>
+                        <InnerCarousel as={motion.div} drag="x" dragConstraints={{ right: 0, left: -width }}>
+                            {images.map(image => {
+                                return (
+                                    <Item>
 
-                            </Top>
-                            <Bottom>
+                                        <Image src={image.image} />
+                                        <Title as={motion.h2} animate={{ x: 20 }} transition={{ ease: "easeInOut", duration: 2 }} >{image.title}</Title>
+                                    </Item>
 
-                            </Bottom>
-                        </Right>
-                    </Body>
+                                )
+                            })}
+                        </InnerCarousel>
+                    </Carousel>
+
+
 
                 </Container>
             </Section>

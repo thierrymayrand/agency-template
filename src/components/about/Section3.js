@@ -5,18 +5,13 @@ const Section = styled.div`
 margin: 10% 0;
 `
 const Title = styled.h1`
-text-align: center;
-font-family: Poppins;
-font-style: normal;
-font-weight: 600;
-font-size: 48px;
-line-height: 64px;
-margin-bottom: 50px;
+
 `
 const ItemContainer = styled.div`
 width: 30%;
 @media (max-width: 768px) {
     width: 100%;
+    margin-top: 20px;
     
 }
 `
@@ -57,14 +52,28 @@ line-height: 36px;
 }
 `
 const ItemP = styled.p`
-color: black;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+/* or 175% */
+
+text-align: justify;
+
+/* Dark blue */
+
+color: #282938;
+
+opacity: 0.7;
+
 `
 const ItemsContainer = styled.div`
 display: flex;
 justify-content: space-between;
 @media (max-width: 768px) {
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
     
 }
 `
@@ -76,7 +85,7 @@ height: 100%;
 
 
 function Section3() {
-    const items = [{ title: "Planning" }, { title: "Conception" }, { title: "Design" }, { title: "Development" }]
+    const items = [{ title: "Planning", text: "Chose from over 500 templates" }, { title: "Conception", text: "We go back and forth with our clients to nail down the look they are going for" }, { title: "Design", text: "Incredibly talented designers will work on your website" }, { title: "Development", text: "Let's get your website mobile responsive and ready for production " }]
     return (
         <Section>
             <Title>The process we follow</Title>
@@ -91,7 +100,7 @@ function Section3() {
                             </ItemTop>
                             <ItemTextContainer>
                                 <ItemT>{item.title}</ItemT>
-                                <ItemP>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</ItemP>
+                                <ItemP>{item.text}</ItemP>
                             </ItemTextContainer>
                         </ItemContainer>
                     )
