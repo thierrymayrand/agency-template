@@ -18,15 +18,16 @@ const Text = styled.p`
 `
 const PackageContainer = styled.div`
 display: flex;
-gap: 2%;
-justify-content: space-between;
-height: 745px;
+flex-wrap: wrap;
+gap: 50px;
+justify-content: center;
 `
 
 const PackageItem = styled.div`
 padding: 64px 48px;
 background: #F4F6FC;
 border-radius: 12px;
+height: 500px;
 `
 
 const PackagePrice = styled.h3`
