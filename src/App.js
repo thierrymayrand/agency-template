@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from "./components/home/Home"
@@ -17,6 +17,9 @@ function App() {
         <Switch>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/" exact>
+            <Redirect to="home" />
           </Route>
           <Route path="/about">
             <About />
