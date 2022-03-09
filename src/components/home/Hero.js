@@ -128,12 +128,12 @@ const linkStyle = {
 function Hero() {
     return (
         <HeroContainer>
-            <Video width="100%" height="auto" autoPlay muted loop>
+            <Video width="100%" height="auto" autoPlay muted loop >
                 <source src={airforce} type="video/mp4" autoplay />
             </Video>
             <FlexContainer>
                 <LeftComponent>
-                    <H1>Building Stellar websites for early startups</H1>
+                    <H1>3DFlex a Montreal based web design agency</H1>
                     <P>Our roots come from the best experts in web development, software development, SaaS development, application development, programming, UX/UI design and architects.</P>
                     <ButtonsContainer>
                         <Link to="/work" style={linkStyle}>View our work</Link>

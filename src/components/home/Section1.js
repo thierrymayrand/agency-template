@@ -9,7 +9,7 @@ margin-top: 0;
 `
 const FlexContainer = styled.div`
 display: flex;
-margin: 10% 20%;
+margin: 10% 5%;
 @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -41,7 +41,7 @@ margin-top: 10px;
 `
 
 const RightContainer = styled.div`
-
+margin-left: 20px;
 @media (max-width: 768px) {
     margin-top: 30px;
 }
