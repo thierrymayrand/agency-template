@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import arrow from "../../images/arrow.png"
 import illustration from "../../images/Illustration.png"
+import airforce from "./airforce.mp4"
 
 
 const HeroContainer = styled.div`
@@ -111,6 +112,8 @@ const Illustration = styled.img`
 width: 90%;
 margin: 10px 10px;
 `
+const Video = styled.video`
+`
 const linkStyle = {
     padding: "18px 40px",
     borderRadius: "41px",
@@ -125,6 +128,9 @@ const linkStyle = {
 function Hero() {
     return (
         <HeroContainer>
+            <Video width="100%" height="auto" autoPlay muted loop>
+                <source src={airforce} type="video/mp4" autoplay />
+            </Video>
             <FlexContainer>
                 <LeftComponent>
                     <H1>Building Stellar websites for early startups</H1>
